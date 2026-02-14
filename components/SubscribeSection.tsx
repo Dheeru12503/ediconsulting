@@ -76,7 +76,7 @@ export default function SubscribeSection() {
                     placeholder="Enter Your Email"
                     className="w-full px-6 py-4 bg-white outline-none text-gray-700 rounded-full shadow-lg"
                   />
-                  <button className="flex items-center justify-center gap-2 bg-[#1B505B] text-white px-6 py-4 rounded-full hover:bg-[#163F47] hover:shadow-xl transition-all duration-300 shadow-lg">
+                  <button className="flex items-center justify-center gap-2 bg-[#12373f] text-white px-6 py-4 rounded-full hover:bg-[#163F47] hover:shadow-xl transition-all duration-300 shadow-lg">
                     Enroll Now
                     <ArrowRight size={18} />
                   </button>

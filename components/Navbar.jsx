@@ -6,7 +6,7 @@ export default function Navbar() {
   const menuItems = ['Home', 'About', 'Services', 'Blogs'];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-[#1B505B] text-white z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-[#0F2F35] text-white z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 border-b border-white/20 relative">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -15,7 +15,7 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden min-[760px]:flex items-center space-x-4 xl:space-x-6 text-xl xl:text-[24px]">
             {menuItems.map((item) => (
-              <a key={item} href="#" className="font-medium hover:opacity-80 transition-opacity">{item}</a>
+              <a key={item} href="/about" className="font-medium hover:opacity-80 transition-opacity">{item}</a>
             ))}
           </div>
 
