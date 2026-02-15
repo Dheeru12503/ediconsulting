@@ -21,8 +21,8 @@ export default function ProcessFlowSection() {
   ];
 
   return (
-    <section className="w-full bg-[#F1F7F8] py-24 px-6 lg:px-20">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="w-full bg-[#F1F7F8] py-24">
+      <div className="container mx-auto px-6 text-center">
         
         {/* TITLE */}
         <h2 className="text-4xl font-bold text-[#12373F]">

@@ -5,13 +5,9 @@ import HeroTabs from "@/components/HeroTabs";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#1B505B] overflow-hidden pt-[88px] md:min-h-screen">
-      {/* Shapes */}
-      <div className="absolute top-20 left-20 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl z-0"></div>
-      <div className="absolute bottom-20 right-20 w-96 h-96 bg-teal-600/10 rounded-full blur-3xl z-0"></div>
-
+    <section className="relative bg-[#1B505B] overflow-hidden pt-[88px] md:max-h-[760px] md:min-h-[640px] lg:min-h-[810px] flex">
       {/* CONTENT */}
-      <div className="container mx-auto px-6 py-16 max-[760px]:px-4 max-[760px]:py-8 relative z-20 md:min-h-[calc(100vh-88px)] md:flex md:items-center">
+      <div className="container mx-auto px-6 py-24 max-[760px]:px-4 max-[760px]:py-8 relative z-20  md:flex md:items-center">
         <div className="gap-12 items-center w-full max-[760px]:flex max-[760px]:flex-col">
           <div className="space-y-8 w-full max-[760px]:space-y-0 max-[760px]:flex max-[760px]:flex-col max-[760px]:h-full">
             <div className="text-white font-serif leading-tight max-[760px]:text-center max-[760px]:px-2 max-[760px]:pt-4 max-[760px]:flex-shrink-0">
@@ -20,7 +16,10 @@ export default function HeroSection() {
               </h1>
 
               <h2 className="text-[59px] md:text-[38px] lg:text-[59px] max-[760px]:text-[24px] max-[760px]:leading-tight mt-6 max-[760px]:mt-2">
-                Precision <span className="underline decoration-white decoration-[2px] underline-offset-[4px] [text-decoration-skip-ink:auto]">Meets Reliability</span>
+                Precision{" "}
+                <span className="underline decoration-white decoration-[2px] underline-offset-[4px] [text-decoration-skip-ink:auto]">
+                  Meets Reliability
+                </span>
               </h2>
             </div>
 
@@ -35,10 +34,16 @@ export default function HeroSection() {
                   className="object-contain max-w-[160px]"
                   priority
                 />
-                
+
                 {/* Name Badge - Mobile */}
                 <div className="absolute bottom-[60%] right-0 bg-[#03343D] px-3 py-1 rounded-l-xl">
-                  <p className="text-white text-[18px]" style={{ fontFamily: "Lovers Quarrel, cursive", fontWeight: "400" }}>
+                  <p
+                    className="text-white text-[18px]"
+                    style={{
+                      fontFamily: "Lovers Quarrel, cursive",
+                      fontWeight: "400",
+                    }}
+                  >
                     Ather Shahidi
                   </p>
                 </div>
@@ -48,27 +53,32 @@ export default function HeroSection() {
             <div className="max-[760px]:flex-1 max-[760px]:overflow-hidden max-[760px]:flex max-[760px]:flex-col">
               <HeroTabs />
             </div>
-          </div>
-        </div>
-      </div>
+            {/* IMAGE - Desktop */}
+            <div className=" absolute right-0 top-[88px] z-[-1]  max-[760px]:hidden ">
+              <div className="relative flex items-end justify-end ">
+                <Image
+                  src="/client_img_copy.png"
+                  alt="Ather Shahidi"
+                  width={500}
+                  height={700}
+                  className="object-contain object-bottom max-h-full md:w-[350px] lg:w-[500px]"
+                  priority
+                />
 
-      {/* IMAGE - Desktop */}
-      <div className="absolute right-0 top-[88px] z-10 w-1/2 max-[760px]:hidden h-[calc(100vh-88px)]">
-        <div className="relative flex items-end justify-end h-full">
-          <Image
-            src="/client_img_copy.png"
-            alt="Ather Shahidi"
-            width={500}
-            height={700}
-            className="object-contain object-bottom max-h-full md:w-[350px] lg:w-[500px]"
-            priority
-          />
-          
-          {/* Name Badge - Desktop */}
-          <div className="absolute bottom-16 right-0 bg-[#03343D] px-8 py-4 md:px-4 md:py-2 lg:px-8 lg:py-4 rounded-l-2xl">
-            <p className="text-white md:text-[36px] lg:text-[56px]" style={{ fontFamily: "Lovers Quarrel, cursive", fontWeight: "400" }}>
-              Ather Shahidi
-            </p>
+                {/* Name Badge - Desktop */}
+                <div className="absolute bottom-16 right-0 bg-[#03343D] px-8 py-4 md:px-4 md:py-2 lg:px-8 lg:py-4 rounded-l-2xl">
+                  <p
+                    className="text-white md:text-[36px] lg:text-[56px]"
+                    style={{
+                      fontFamily: "Lovers Quarrel, cursive",
+                      fontWeight: "400",
+                    }}
+                  >
+                    Ather Shahidi
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
