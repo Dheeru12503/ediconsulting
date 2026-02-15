@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function IntroductionSection() {
   return (
-    <section className="w-full bg-[#E8F3F4] py-20 px-6 lg:px-20">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <section className="w-full bg-[#E8F3F4] py-20">
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         
         {/* LEFT IMAGE LAYOUT */}
         <div className="relative w-full h-[520px]">

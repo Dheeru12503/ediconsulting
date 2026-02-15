@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className="w-full bg-[#0F2F35] text-white">
       
       {/* TOP FOOTER */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-20 py-16 grid md:grid-cols-3 gap-12">
+      <div className="container mx-auto px-6 py-16 grid md:grid-cols-3 gap-12">
         
         {/* COMPANY INFO */}
         <div>
@@ -97,7 +97,7 @@ export default function Footer() {
 
       {/* BOTTOM BAR */}
       <div className="border-t border-[#1B505B]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-20 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+        <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
           
           <p>
             © {new Date().getFullYear()} EDI Consulting. All rights reserved.

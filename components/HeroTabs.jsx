@@ -78,7 +78,7 @@ export default function HeroTabs() {
     bg-[#03343D]
     backdrop-blur-md
     rounded-b-2xl
-    px-8 py-6 md:px-4 md:py-3 lg:px-8 lg:py-6
+    px-8 py-6 md:px-3 md:py-5 lg:px-6 lg:py-6
     inline-flex flex-wrap   
     gap-10 md:gap-5 lg:gap-10
     items-center
@@ -147,7 +147,6 @@ export default function HeroTabs() {
                   <div key={i}>
                     <h3 className="text-white font-bold text-[10px] mb-0.5">{item.title}</h3>
                     <p className="text-white/70 text-[9px]">{item.desc}</p>
-                    {i === 0 && <div className="h-[1px] bg-white/30 mt-2.5"></div>}
                   </div>
                 ))}
               </div>
@@ -172,7 +171,6 @@ export default function HeroTabs() {
                   <div key={i}>
                     <h3 className="text-white font-bold text-[10px] mb-0.5">{item.title}</h3>
                     <p className="text-white/70 text-[9px]">{item.desc}</p>
-                    {i === 0 && <div className="h-[1px] bg-white/30 mt-2.5"></div>}
                   </div>
                 ))}
               </div>
