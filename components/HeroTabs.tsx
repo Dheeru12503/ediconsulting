@@ -8,8 +8,8 @@ const inriaSans = Inria_Sans({
 });
 
 export default function HeroTabs() {
-  const [activeTab, setActiveTab] = useState("edi");
-  const [expandedAccordion, setExpandedAccordion] = useState("edi");
+  const [activeTab, setActiveTab] = useState<"edi" | "erp" | "trading">("edi");
+  const [expandedAccordion, setExpandedAccordion] = useState<"edi" | "erp" | "trading">("edi");
 
   const tabData = {
     edi: [

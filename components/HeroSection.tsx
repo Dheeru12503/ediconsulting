@@ -6,6 +6,17 @@ import HeroTabs from "@/components/HeroTabs";
 export default function HeroSection() {
   return (
     <section className="relative bg-[#1B505B] overflow-hidden pt-[88px] md:max-h-[760px] md:min-h-[640px] lg:min-h-[810px] flex">
+      {/* Blurred Random Squares */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-[10%] left-[0%] w-20 h-20 md:w-20 md:h-20 lg:w-48 lg:h-48 bg-[#0F2F35]/40 blur-xl" />
+
+        <div className="absolute top-[70%] left-[5%] w-24 h-24 md:w-32 md:h-32 bg-[#0F2F35]/30 blur-xl" />
+        <div className="absolute top-[20%] right-[15%] w-28 h-28 md:w-36 md:h-36 lg:w-44 lg:h-44 bg-[#0F2F35]/35 blur-xl" />
+        <div className="absolute bottom-[5%] right-[20%] w-20 h-20 md:w-28 md:h-28 bg-[#0F2F35]/40 blur-xl" />
+        <div className="absolute top-[35%] left-[40%] w-16 h-16 md:w-24 md:h-24 bg-[#0F2F35]/25 blur-xl max-[760px]:hidden" />
+        <div className="absolute top-[40%] left-[85%] w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-[#0F2F35]/40 blur-xl" />
+      </div>
+      
       {/* CONTENT */}
       <div className="container mx-auto px-6 py-24 max-[760px]:px-4 max-[760px]:py-8 relative z-20  md:flex md:items-center">
         <div className="gap-12 items-center w-full max-[760px]:flex max-[760px]:flex-col">
@@ -44,7 +55,7 @@ export default function HeroSection() {
             <div className="absolute right-0 top-[88px] z-[-1] max-[760px]:hidden">
               <div className="relative flex items-end justify-end">
                 <Image
-                  src="/client_img_copy.png"
+                  src="/client_img.png"
                   alt="Ather Shahidi"
                   width={500}
                   height={700}

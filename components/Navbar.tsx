@@ -45,16 +45,40 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [pathname]);
 
-  const handleMenuClick = (item) => {
-    setActiveItem(item);
-    if (item === 'Services') {
-      const section = document.getElementById('consulting-services');
+  const handleContactClick = () => {
+    if (pathname !== '/') {
+      router.push('/#subscribe');
+    } else {
+      const section = document.getElementById('subscribe');
       if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
-        setIsOpen(false);
-      } else {
-        router.push('/#consulting-services');
       }
+    }
+    setIsOpen(false);
+  };
+
+  const handleMenuClick = (item: string) => {
+    setActiveItem(item);
+    if (item === 'Services') {
+      if (pathname !== '/') {
+        router.push('/#consulting-services');
+      } else {
+        const section = document.getElementById('consulting-services');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+      setIsOpen(false);
+    } else if (item === 'Blogs') {
+      if (pathname !== '/') {
+        router.push('/#vlogs');
+      } else {
+        const section = document.getElementById('vlogs');
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+      setIsOpen(false);
     } else if (item === 'Home') {
       router.push('/');
     } else if (item === 'About') {
@@ -95,7 +119,7 @@ export default function Navbar() {
           </div>
 
           {/* Contact Button */}
-          <button onClick={() => router.push('/contact')} className="hidden min-[760px]:flex items-center gap-2 font-medium hover:opacity-80 transition-opacity text-xl xl:text-[24px]">
+          <button onClick={handleContactClick} className="hidden min-[760px]:flex items-center gap-2 font-medium hover:opacity-80 transition-opacity text-xl xl:text-[24px]">
             Contact us <span>→</span>
           </button>
 
@@ -123,7 +147,7 @@ export default function Navbar() {
                   {item}
                 </button>
               ))}
-              <button onClick={() => router.push('/contact')} className="block hover:opacity-80 transition-opacity w-full text-left">
+              <button onClick={handleContactClick} className="block hover:opacity-80 transition-opacity w-full text-left">
                 Contact us <span>→</span>
               </button>
             </div>

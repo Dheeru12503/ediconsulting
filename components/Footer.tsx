@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 export default function Footer() {
-  const handleLinkClick = (sectionId) => {
+  const handleLinkClick = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });

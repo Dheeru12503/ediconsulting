@@ -11,6 +11,8 @@ import ProcessFlowSection from '@/components/ProcessFlowSection';
 import TradingPartnersSection from '@/components/TradingPartnersSection';
 import ERPIntegrationsSection from '@/components/ERPIntegrationsSection';
 import EDITransactionsSection from '@/components/EDITransactionsSection';
+import BlogSection from '@/components/BlogSection';
+
 export default function Home() {
   return (
     <main>
@@ -25,6 +27,7 @@ export default function Home() {
       <EDITransactionsSection/>
       {/* <ClientSuccess /> */}
       {/* <ProjectsSection/> */}
+      <BlogSection/>
       <SubscribeSection/>
       <Footer/>
     </main>
