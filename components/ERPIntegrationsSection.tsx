@@ -27,7 +27,7 @@ const erpSystems = [
 
 export default function ERPIntegrationsSection() {
   return (
-    <section className="w-full bg-[#F1F7F8] py-20">
+    <section id="erp-integrations" className="w-full bg-[#F1F7F8] py-20">
       <div className="container mx-auto px-6 text-center">
         
         {/* TITLE */}

@@ -33,7 +33,7 @@ const partners = [
 
 export default function TradingPartnersSection() {
   return (
-    <section className="w-full bg-[#F1F7F8] py-16">
+    <section id="trading-partners" className="w-full bg-[#F1F7F8] py-16">
       <div className="container mx-auto px-6">
         {/* TITLE WITH LINES */}
         <div className="flex items-center gap-3 md:gap-6 mb-12">

@@ -15,7 +15,7 @@ export default function HeroSection() {
                 EDI Integration
               </h1>
 
-              <h2 className="text-[59px] md:text-[38px] lg:text-[59px] max-[760px]:text-[24px] max-[760px]:leading-tight mt-6 max-[760px]:mt-2">
+              <h2 className="text-[59px] md:text-[38px] lg:text-[59px] max-[760px]:text-[24px] max-[760px]:leading-tight mt-6 max-[760px]:mt-2 max-[760px]:whitespace-nowrap">
                 Precision{" "}
                 <span className="underline decoration-white decoration-[2px] underline-offset-[4px] [text-decoration-skip-ink:auto]">
                   Meets Reliability
@@ -24,7 +24,7 @@ export default function HeroSection() {
             </div>
 
             {/* IMAGE - Mobile */}
-            <div className="hidden max-[760px]:flex flex-col items-center justify-center relative max-[760px]:mt-3 max-[760px]:flex-shrink-0 max-[760px]:w-[calc(100%+1rem)] max-[760px]:-mr-4">
+            <div className="hidden max-[760px]:flex flex-col items-center justify-center relative max-[760px]:mt-3 max-[760px]:flex-shrink-0">
               <div className="relative w-full flex justify-center">
                 <Image
                   src="/client_img_copy.png"
@@ -34,19 +34,6 @@ export default function HeroSection() {
                   className="object-contain max-w-[160px]"
                   priority
                 />
-
-                {/* Name Badge - Mobile */}
-                <div className="absolute bottom-[60%] right-0 bg-[#03343D] px-3 py-1 rounded-l-xl">
-                  <p
-                    className="text-white text-[18px]"
-                    style={{
-                      fontFamily: "Lovers Quarrel, cursive",
-                      fontWeight: "400",
-                    }}
-                  >
-                    Ather Shahidi
-                  </p>
-                </div>
               </div>
             </div>
 
@@ -54,8 +41,8 @@ export default function HeroSection() {
               <HeroTabs />
             </div>
             {/* IMAGE - Desktop */}
-            <div className=" absolute right-0 top-[88px] z-[-1]  max-[760px]:hidden ">
-              <div className="relative flex items-end justify-end ">
+            <div className="absolute right-0 top-[88px] z-[-1] max-[760px]:hidden">
+              <div className="relative flex items-end justify-end">
                 <Image
                   src="/client_img_copy.png"
                   alt="Ather Shahidi"
@@ -64,23 +51,36 @@ export default function HeroSection() {
                   className="object-contain object-bottom max-h-full md:w-[350px] lg:w-[500px]"
                   priority
                 />
-
-                {/* Name Badge - Desktop */}
-                <div className="absolute bottom-16 right-0 bg-[#03343D] px-8 py-4 md:px-4 md:py-2 lg:px-8 lg:py-4 rounded-l-2xl">
-                  <p
-                    className="text-white md:text-[36px] lg:text-[56px]"
-                    style={{
-                      fontFamily: "Lovers Quarrel, cursive",
-                      fontWeight: "400",
-                    }}
-                  >
-                    Ather Shahidi
-                  </p>
-                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Name Badge - Desktop */}
+      <div className="absolute bottom-16 right-0 bg-[#03343D] px-8 py-4 md:px-4 md:py-2 lg:px-8 lg:py-4 rounded-l-2xl max-[760px]:hidden z-20">
+        <p
+          className="text-white md:text-[36px] lg:text-[56px]"
+          style={{
+            fontFamily: "Lovers Quarrel, cursive",
+            fontWeight: "400",
+          }}
+        >
+          Ather Shahidi
+        </p>
+      </div>
+      
+      {/* Name Badge - Mobile */}
+      <div className="absolute top-[280px] right-0 bg-[#03343D] px-3 py-1 rounded-l-xl min-[760px]:hidden z-20">
+        <p
+          className="text-white text-[18px]"
+          style={{
+            fontFamily: "Lovers Quarrel, cursive",
+            fontWeight: "400",
+          }}
+        >
+          Ather Shahidi
+        </p>
       </div>
     </section>
   );

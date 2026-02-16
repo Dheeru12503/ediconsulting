@@ -35,7 +35,7 @@ export default function ConsultingServicesSection() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="w-full bg-[#F1F7F8] py-20">
+    <section id="consulting-services" className="w-full bg-[#F1F7F8] py-20">
       <div className="container mx-auto px-6">
         
         {/* SECTION TITLE */}

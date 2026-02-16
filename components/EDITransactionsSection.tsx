@@ -18,7 +18,7 @@ export default function EDITransactionsSection() {
   const logisticsTx = ["940", "945", "944", "214"];
 
   return (
-    <section className="w-full bg-[#F1F7F8] py-20">
+    <section id="edi-transactions" className="w-full bg-[#F1F7F8] py-20">
       <div className="container mx-auto px-6 text-center">
         
         {/* TITLE */}

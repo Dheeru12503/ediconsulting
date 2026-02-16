@@ -8,6 +8,15 @@ import {
 } from "react-icons/fa";
 
 export default function Footer() {
+  const handleLinkClick = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = `/#${sectionId}`;
+    }
+  };
+
   return (
     <footer className="w-full bg-[#0F2F35] text-white">
       
@@ -48,16 +57,16 @@ export default function Footer() {
           </h3>
 
           <ul className="space-y-3 text-gray-300 text-sm">
-            <li className="hover:text-white cursor-pointer">
+            <li onClick={() => handleLinkClick('consulting-services')} className="hover:text-white cursor-pointer">
               → Consulting Services
             </li>
-            <li className="hover:text-white cursor-pointer">
+            <li onClick={() => handleLinkClick('erp-integrations')} className="hover:text-white cursor-pointer">
               → ERP Integrations
             </li>
-            <li className="hover:text-white cursor-pointer">
+            <li onClick={() => handleLinkClick('trading-partners')} className="hover:text-white cursor-pointer">
               → Trading Partners
             </li>
-            <li className="hover:text-white cursor-pointer">
+            <li onClick={() => handleLinkClick('edi-transactions')} className="hover:text-white cursor-pointer">
               → EDI Transactions
             </li>
             <li className="hover:text-white cursor-pointer">
@@ -85,9 +94,9 @@ export default function Footer() {
               <p className="text-white font-medium">
                 Email:
               </p>
-              <p className="break-all">
+              <a href="mailto:ATHER_SHAHIDI@HOTMAIL.COM" className="break-all hover:text-white transition">
                 ATHER_SHAHIDI@HOTMAIL.COM
-              </p>
+              </a>
             </div>
 
           </div>
