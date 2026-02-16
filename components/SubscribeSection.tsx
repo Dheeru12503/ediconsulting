@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function SubscribeSection() {
   return (
-    <section className="w-full py-16 bg-[#F5F7F8]">
+    <section id="subscribe" className="w-full py-16 bg-[#F5F7F8]">
       <div className="container mx-auto px-6">
 
         {/* CTA Container */}
