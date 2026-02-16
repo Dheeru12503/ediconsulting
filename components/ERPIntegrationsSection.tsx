@@ -27,30 +27,49 @@ const erpSystems = [
 
 export default function ERPIntegrationsSection() {
   return (
-    <section id="erp-integrations" className="w-full bg-[#F1F7F8] py-20">
-      <div className="container mx-auto px-6 text-center">
-        
+    <section className="w-full bg-gradient-to-b from-[#F4FAFB] to-white py-16 sm:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+
         {/* TITLE */}
-        <h2 className="text-4xl font-bold text-[#12373F]">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#12373F] animate-fadeUp">
           ERP Integrations
         </h2>
 
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm sm:text-base animate-fadeUp delay-100">
           Seamless integration with leading enterprise ERP platforms to
           automate document exchange and operational workflows.
         </p>
 
         {/* GRID */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 mt-16">
-          
+        <div className="
+          grid
+          grid-cols-1
+          sm:grid-cols-2
+          md:grid-cols-3
+          xl:grid-cols-5
+          gap-6
+          mt-12 sm:mt-16
+        ">
           {erpSystems.map((erp, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl border border-[#D6E6E8] shadow-sm hover:shadow-xl transition group"
+              className="
+                bg-white
+                p-6
+                rounded-2xl
+                border border-[#E1EEF0]
+                shadow-sm
+                flex flex-col items-center justify-center
+                min-h-[170px]
+                transition-all duration-500
+                hover:-translate-y-2
+                hover:shadow-xl
+                animate-fadeUp
+              "
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              
               {/* Logo */}
-              <div className="relative h-12 w-full mb-6">
+              <div className="relative h-12 w-full mb-5 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src={erp.logo}
                   alt={erp.name}
@@ -60,7 +79,7 @@ export default function ERPIntegrationsSection() {
               </div>
 
               {/* Name */}
-              <h3 className="text-sm font-semibold text-[#12373F]">
+              <h3 className="text-sm font-semibold text-[#12373F] text-center">
                 {erp.name}
               </h3>
             </div>
