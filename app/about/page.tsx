@@ -18,10 +18,11 @@ export default function AboutPage() {
           <div className="absolute -bottom-6 -right-6 w-full h-full bg-[#1B505B]/10 rounded-2xl"></div>
 
           <Image
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop"
+            src="/about_img1.jpg"
             alt="Consultant"
             width={600}
-            height={500}
+            height={400}
+            style={{ height: '400px', width: '100%', objectFit: 'cover' }}
             className="rounded-2xl shadow-lg relative z-10"
           />
         </div>
@@ -80,7 +81,7 @@ export default function AboutPage() {
         </div>
 
         <Image
-          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop"
+          src="/about_img2.jpg"
           alt="Strategy"
           width={600}
           height={600}
@@ -92,10 +93,11 @@ export default function AboutPage() {
       <section className="container mx-auto px-6 py-20 grid md:grid-cols-2 gap-16 items-center">
         
         <Image
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop"
+          src="/about_img3.jpg"
           alt="Travel"
           width={600}
-          height={600}
+          height={400}
+          style={{ height: '400px', width: '100%', objectFit: 'cover' }}
           className="rounded-2xl shadow-lg"
         />
 

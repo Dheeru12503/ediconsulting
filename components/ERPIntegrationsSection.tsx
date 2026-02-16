@@ -5,23 +5,23 @@ import Image from "next/image";
 const erpSystems = [
   {
     name: "SAP",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/SAP_2011_logo.svg",
+    logo: "/logo/sap.png",
   },
   {
     name: "VISUAL Manufacturing",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Infor_logo.svg",
+    logo: "/logo/infor.png",
   },
   {
     name: "Microsoft Dynamics NAV",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+    logo: "/logo/microsoft.png",
   },
   {
     name: "SYSPRO",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7c/SYSPRO_Logo.svg",
+    logo: "/logo/syspro.png",
   },
   {
     name: "JD Edwards",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg",
+    logo: "/logo/OracleJD.png",
   },
 ];
 

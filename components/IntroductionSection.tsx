@@ -13,7 +13,7 @@ export default function IntroductionSection() {
           {/* Main Image */}
           <div className="absolute left-0 top-0 w-[75%] h-full rounded-2xl overflow-hidden shadow-lg">
             <Image
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop"
+              src="/intro_img1.jpg"
               alt="EDI Consulting"
               fill
               className="object-cover"
@@ -21,9 +21,9 @@ export default function IntroductionSection() {
           </div>
 
           {/* Experience Card */}
-          <div className="absolute -left-6 top-10 bg-[#1B505B] text-white px-8 py-10 rounded-2xl shadow-xl">
-            <h2 className="text-4xl font-bold">25+</h2>
-            <p className="text-sm mt-2 opacity-90">
+          <div className="absolute -left-4 sm:-left-6 top-10 bg-[#1B505B] text-white px-6 sm:px-8 py-6 sm:py-10 rounded-2xl shadow-xl">
+            <h2 className="text-3xl sm:text-4xl font-bold">25+</h2>
+            <p className="text-xs sm:text-sm mt-2 opacity-90">
               Years of Experience
             </p>
           </div>
@@ -31,7 +31,7 @@ export default function IntroductionSection() {
           {/* Small Image */}
           <div className="absolute bottom-6 right-0 w-[45%] h-[220px] rounded-2xl overflow-hidden border-8 border-white shadow-lg">
             <Image
-              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=1200&auto=format&fit=crop"
+              src="/intro_img2.jpg"
               alt="Meeting"
               fill
               className="object-cover"
@@ -93,7 +93,7 @@ export default function IntroductionSection() {
 
           {/* Contact */}
           <div className="mt-10 flex items-center gap-6">
-            <div className="bg-[#1B505B] text-white p-4 rounded-xl shadow-md">
+            <div className="bg-white text-[#1B505B] p-4 rounded-xl shadow-md">
               📞
             </div>
 

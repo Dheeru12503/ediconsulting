@@ -102,9 +102,9 @@ export default function ConsultingServicesSection() {
                   {services[active].desc}
                 </p>
 
-                <button className="mt-6 bg-white text-[#1B505B] px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition">
+                {/* <button className="mt-6 bg-white text-[#1B505B] px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition">
                   Know More
-                </button>
+                </button> */}
               </div>
             </div>
 
