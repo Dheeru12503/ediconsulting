@@ -3,30 +3,32 @@
 import Image from "next/image";
 
 const partners = [
-  {
-    name: "Target",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg",
-  },
- {
-    name: "Amazon",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-  },
-  {
-    name: "Target",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg",
-  },
   
   {
-    name: "Amazon",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
-  },
-  {
     name: "Target",
     logo: "https://upload.wikimedia.org/wikipedia/commons/9/9a/Target_logo.svg",
   },
+ 
+  {
+    name: "Home Depot",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/5/5f/TheHomeDepot.svg",
+  },
+  {
+    name: "Costco",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/5/59/Costco_Wholesale_logo_2010-10-26.svg",
+  },
+  
+ 
   {
     name: "Amazon",
     logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+  },
+
+ 
+ 
+  {
+    name: "Best Buy",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/f/f5/Best_Buy_Logo.svg",
   },
   
 ];

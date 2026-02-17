@@ -13,20 +13,21 @@ export default function HeroTabs() {
 
   const tabData = {
     edi: [
-      { title: "LAHAM", desc: "Lorem ipsum lorem ipsum" },
-      { title: "SPS COMMERCE", desc: "Lorem ipsum lorem ipsum" },
-      { title: "TRUE COMMERCE", desc: "Lorem ipsum lorem ipsum" },
-      { title: "SPS COMMERCE", desc: "Lorem ipsum lorem ipsum" },
+      { title: "LIAISON ECS", desc: "Secure Data Routing" },
+      { title: "LAHAM", desc: "Native ERP Integration" },
+      { title: "TRUE COMMERCE", desc: "Managed Supply Connectivity" },
+      { title: "SPS COMMERCE", desc: "Full-Service Retail Network" },
     ],
     erp: [
       { title: "SAP", desc: "ERP Integration partner" },
-      { title: "Oracle", desc: "Cloud ERP solutions" },
-      { title: "NetSuite", desc: "Business management" },
+      { title: "ORACLE", desc: "Cloud ERP solutions" },
+      { title: "SYSPRO", desc: "Business management" },
+      {title: "VISUAL Manufacturing", desc: "Manufacturing ERP solutions"}
     ],
     trading: [
-      { title: "Walmart", desc: "Retail trading partner" },
-      { title: "Amazon", desc: "Marketplace partner" },
-      { title: "Shopify", desc: "Ecommerce partner" },
+      { title: "WAREHOUSING" ,desc: "3PL & Fulfillment" },
+      { title: "TRANSPORTATION", desc: "Carrier & Freight Management" },
+      { title: "LOGISTICS PROVIDERS", desc: "End-to-End Supply Chain" },
     ],
   };
 
@@ -67,7 +68,7 @@ export default function HeroTabs() {
               : "bg-white/10 text-black hover:bg-white/20"
           }`}
         >
-          Trading Partner
+          3PL & Carriers
         </button>
       </div>
 
