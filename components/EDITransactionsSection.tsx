@@ -14,11 +14,11 @@ export default function EDITransactionsSection() {
       <div className="max-w-7xl mx-auto text-center animate-fadeUp">
         
         {/* TITLE */}
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#12373F]">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#12373F] animate-fadeUp">
           Supported EDI Transactions
         </h2>
 
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto text-sm sm:text-base animate-fadeUp" style={{ animationDelay: "100ms" }}>
           Comprehensive support for standard retail and logistics EDI
           transaction sets across enterprise supply chain environments.
         </p>
@@ -30,7 +30,7 @@ export default function EDITransactionsSection() {
           <div className="group bg-white p-6 sm:p-10 rounded-3xl 
           shadow-lg border border-[#E1EEF0]
           transition-all duration-500 
-          hover:-translate-y-2 hover:shadow-2xl">
+          hover:-translate-y-2 hover:shadow-2xl animate-fadeUp" style={{ animationDelay: "200ms" }}>
             
             <h3 className="text-lg sm:text-xl font-semibold text-[#12373F] mb-6">
               Standard Transactions
@@ -57,7 +57,7 @@ export default function EDITransactionsSection() {
           <div className="group bg-white p-6 sm:p-10 rounded-3xl 
           shadow-lg border border-[#E1EEF0]
           transition-all duration-500 
-          hover:-translate-y-2 hover:shadow-2xl">
+          hover:-translate-y-2 hover:shadow-2xl animate-fadeUp" style={{ animationDelay: "300ms" }}>
             
             <h3 className="text-lg sm:text-xl font-semibold text-[#12373F] mb-6">
               3PL Transactions

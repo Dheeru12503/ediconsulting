@@ -25,11 +25,11 @@ export default function ProcessFlowSection() {
       <div className="container mx-auto px-6 text-center">
         
         {/* TITLE */}
-        <h2 className="text-4xl font-bold text-[#12373F]">
+        <h2 className="text-4xl font-bold text-[#12373F] animate-fadeUp">
           EDI to ERP to 3PL Flow
         </h2>
 
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+        <p className="text-gray-600 mt-4 max-w-2xl mx-auto animate-fadeUp" style={{ animationDelay: "100ms" }}>
           A streamlined data exchange process connecting trading partners,
           enterprise systems, and logistics providers through secure EDI
           infrastructure.
@@ -44,7 +44,7 @@ export default function ProcessFlowSection() {
           <div className="grid md:grid-cols-4 gap-8 relative">
             
             {flowSteps.map((step, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <div key={index} className="flex flex-col items-center animate-fadeUp" style={{ animationDelay: `${200 + index * 100}ms` }}>
                 
                 {/* Circle Node */}
                 <div className="w-16 h-16 rounded-full bg-[#1B505B] text-white flex items-center justify-center text-xl font-semibold shadow-lg border-4 border-white">

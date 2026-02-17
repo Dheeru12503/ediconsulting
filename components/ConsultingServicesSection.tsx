@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import AnimateOnScroll from "./AnimateOnScroll";
 
 const services = [
   {
@@ -39,76 +40,76 @@ export default function ConsultingServicesSection() {
       <div className="container mx-auto px-6">
         
         {/* SECTION TITLE */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#12373F]">
-            Consulting Services
-          </h2>
+        <AnimateOnScroll>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[#12373F]">
+              Consulting Services
+            </h2>
 
-          <div className="w-24 h-1 bg-[#1B505B] mx-auto mt-4 rounded-full" />
-        </div>
+            <div className="w-24 h-1 bg-[#1B505B] mx-auto mt-4 rounded-full" />
+          </div>
+        </AnimateOnScroll>
 
         {/* MAIN GRID */}
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           
           {/* LEFT SERVICE LIST */}
-          <div className="space-y-4">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                onClick={() => setActive(index)}
-                className={`cursor-pointer p-5 border-l-4 rounded-r-xl transition-all duration-300
-                ${
-                  active === index
-                    ? "bg-[#DCEFF2] border-[#1B505B]"
-                    : "bg-white border-transparent hover:bg-[#E8F3F4]"
-                }`}
-              >
-                <p
-                  className={`font-medium ${
+          <AnimateOnScroll delay={100}>
+            <div className="space-y-4">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  onClick={() => setActive(index)}
+                  className={`cursor-pointer p-5 border-l-4 rounded-r-xl transition-all duration-300
+                  ${
                     active === index
-                      ? "text-[#1B505B]"
-                      : "text-gray-700"
+                      ? "bg-[#DCEFF2] border-[#1B505B]"
+                      : "bg-white border-transparent hover:bg-[#E8F3F4]"
                   }`}
                 >
-                  {service.title}
-                </p>
-              </div>
-            ))}
-          </div>
+                  <p
+                    className={`font-medium ${
+                      active === index
+                        ? "text-[#1B505B]"
+                        : "text-gray-700"
+                    }`}
+                  >
+                    {service.title}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </AnimateOnScroll>
 
           {/* RIGHT CONTENT CARD */}
-          <div className="relative">
-            
-            {/* Card */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-[#D6E6E8]">
-              
-              {/* Image */}
-              <div className="relative h-[320px] w-full">
-                <Image
-                  src={services[active].img}
-                  alt={services[active].title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+          <AnimateOnScroll delay={300}>
+            <div className="relative">
+              {/* Card */}
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-[#D6E6E8]">
+                
+                {/* Image */}
+                <div className="relative h-[320px] w-full">
+                  <Image
+                    src={services[active].img}
+                    alt={services[active].title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
 
-              {/* Content */}
-              <div className="p-8 bg-gradient-to-r from-[#1B505B] to-[#2F7C8A] text-white">
-                <h3 className="text-2xl font-semibold">
-                  {services[active].title}
-                </h3>
+                {/* Content */}
+                <div className="p-8 bg-gradient-to-r from-[#1B505B] to-[#2F7C8A] text-white">
+                  <h3 className="text-2xl font-semibold">
+                    {services[active].title}
+                  </h3>
 
-                <p className="mt-3 text-sm opacity-90 leading-relaxed">
-                  {services[active].desc}
-                </p>
-
-                {/* <button className="mt-6 bg-white text-[#1B505B] px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 transition">
-                  Know More
-                </button> */}
+                  <p className="mt-3 text-sm opacity-90 leading-relaxed">
+                    {services[active].desc}
+                  </p>
+                </div>
               </div>
             </div>
-
-          </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </section>

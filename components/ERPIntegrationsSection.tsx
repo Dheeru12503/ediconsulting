@@ -13,7 +13,7 @@ const erpSystems = [
   },
   {
     name: "Microsoft Dynamics NAV",
-    logo: "/logo/microsoft.png",
+    logo: "/logo/microsoft1.svg",
   },
   {
     name: "SYSPRO",
