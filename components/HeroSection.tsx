@@ -77,7 +77,7 @@ export default function HeroSection() {
             fontWeight: "400",
           }}
         >
-          Ather Shahidi
+          Ali Ather Shahidi
         </p>
       </div>
       
@@ -90,7 +90,7 @@ export default function HeroSection() {
             fontWeight: "400",
           }}
         >
-          Ather Shahidi
+         Ali Ather Shahidi
         </p>
       </div>
     </section>

@@ -4,57 +4,10 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import SubscribeSection from "@/components/SubscribeSection";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function AboutPage() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [touchStart, setTouchStart] = useState(0);
-  const [touchEnd, setTouchEnd] = useState(0);
-  const galleryImages = [
-    "/gallery1.jpg",
-    "/gallery2.jpg",
-    "/gallery3.jpg",
-    "/gallery4.jpg",
-  ];
-
-  // Auto-slide every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) =>
-        prev === galleryImages.length - 1 ? 0 : prev + 1,
-      );
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [galleryImages.length]);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) =>
-      prev === 0 ? galleryImages.length - 1 : prev - 1,
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prev) =>
-      prev === galleryImages.length - 1 ? 0 : prev + 1,
-    );
-  };
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
-  };
-
-  const handleTouchEnd = () => {
-    if (touchStart - touchEnd > 50) {
-      goToNext();
-    }
-    if (touchStart - touchEnd < -50) {
-      goToPrevious();
-    }
-  };
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <div className="w-full bg-[#F1F7F8] text-[#12373F] pt-[80px] md:pt-[100px]">
@@ -71,75 +24,17 @@ export default function AboutPage() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-          {/* IMAGE SLIDER */}
+          {/* IMAGE */}
           <div className="relative">
-            <div className="absolute -bottom-6 -right-6 w-full h-full bg-[#1B505B]/10 rounded-2xl -z-10"></div>
+            <div className="absolute -bottom-6 -right-6 w-full h-full bg-[#1B505B]/10 rounded-2xl"></div>
 
-            <div
-              className="relative h-[300px] md:h-[400px] rounded-2xl overflow-hidden shadow-lg"
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
-            >
-              <Image
-                src={galleryImages[currentIndex]}
-                alt={`Gallery ${currentIndex + 1}`}
-                fill
-                className="object-cover transition-all duration-500"
-              />
-
-              {/* Navigation Buttons */}
-              <button
-                onClick={goToPrevious}
-                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1B505B] p-2 sm:p-3 rounded-full shadow-lg transition z-10"
-              >
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 19l-7-7 7-7"
-                  />
-                </svg>
-              </button>
-
-              <button
-                onClick={goToNext}
-                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#1B505B] p-2 sm:p-3 rounded-full shadow-lg transition z-10"
-              >
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-
-              {/* Dots Indicator */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-                {galleryImages.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentIndex(index)}
-                    className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition ${
-                      index === currentIndex ? "bg-white" : "bg-white/50"
-                    }`}
-                  />
-                ))}
-              </div>
-            </div>
+            <Image
+              src="/about_img1.jpg"
+              alt="Consultant"
+              width={600}
+              height={400}
+              className="rounded-2xl shadow-lg relative z-10 h-[300px] md:h-[350px] object-cover"
+            />
           </div>
 
           {/* CONTENT */}
@@ -151,15 +46,15 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-gray-600 leading-relaxed mb-4">
-              With over 25 years of experience in Electronic Data Interchange
-              (EDI), I have built my career on precision, reliability, and
-              long-term partnerships.
+              With over 25 years dedicated to Electronic Data Interchange
+              (EDI), I have built my career around precision, reliability,
+              and structured integration design.
             </p>
 
             <p className="text-gray-600 leading-relaxed">
-              But beyond my professional role as an EDI Consultant, I am first
-              and foremost a dedicated family man who values integrity, balance,
-              and shared experiences.
+              My experience spans enterprise retail, manufacturing systems,
+              and third-party logistics environments where system accuracy
+              and compliance are mission-critical.
             </p>
           </div>
         </div>
@@ -280,6 +175,67 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ================= GALLERY ================= */}
+      <section className="container mx-auto px-4 md:px-6 py-8 md:py-20">
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">Gallery</h2>
+          <p className="text-gray-600">Moments from my journey</p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          {[
+            { src: "/gallery1.jpg", alt: "Gallery 1" },
+            { src: "/gallery2.jpg", alt: "Gallery 2" },
+            { src: "/gallery3.jpg", alt: "Gallery 3" },
+            { src: "/gallery4.jpg", alt: "Gallery 4" },
+            { src: "/gallery5.jpg", alt: "Gallery 5" },
+            { src: "/gallery6.jpg", alt: "Gallery 6" },
+          ].map((image, i) => (
+            <div 
+              key={i} 
+              className="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer"
+              onClick={() => setSelectedImage(image.src)}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={400}
+                height={300}
+                className="w-full h-[200px] md:h-[250px] object-cover transition-transform duration-300 group-hover:scale-110"
+                unoptimized
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ================= LIGHTBOX MODAL ================= */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fadeIn"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <div className="relative max-w-5xl max-h-[90vh] animate-scaleIn" onClick={(e) => e.stopPropagation()}>
+            <Image
+              src={selectedImage}
+              alt="Gallery preview"
+              width={1200}
+              height={800}
+              className="rounded-lg object-contain max-h-[90vh] w-auto"
+              unoptimized
+            />
+          </div>
+        </div>
+      )}
+
       {/* ================= YOUTUBE CHANNEL ================= */}
       <section className="bg-[#F1F7F8] py-12 md:py-20">
         <div className="container mx-auto px-4 md:px-6">
@@ -309,7 +265,7 @@ export default function AboutPage() {
                   experiences.
                 </p>
                 <a
-                  href="https://www.youtube.com/@shahidi76"
+                  href="https://www.youtube.com/@aliexploringtheworld"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#1B505B] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2F7C8A] transition"
@@ -321,7 +277,7 @@ export default function AboutPage() {
                   >
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                   </svg>
-                  Visit @shahidi76
+                  Visit @aliexploringtheworld
                 </a>
               </div>
             </div>
