@@ -5,13 +5,15 @@ import { usePathname, useRouter } from 'next/navigation';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('Home');
-  const menuItems = ['Home', 'About', 'Services', 'Blogs'];
+  const menuItems = ['Home', 'Services', 'Blogs', 'About'];
   const pathname = usePathname();
   const router = useRouter();
 
   useEffect(() => {
     if (pathname === '/about') {
       setActiveItem('About');
+    } else if (pathname === '/blog') {
+      setActiveItem('Blogs');
     } else if (pathname === '/') {
       const hash = window.location.hash;
       if (hash === '#consulting-services') {
@@ -70,14 +72,7 @@ export default function Navbar() {
       }
       setIsOpen(false);
     } else if (item === 'Blogs') {
-      if (pathname !== '/') {
-        router.push('/#vlogs');
-      } else {
-        const section = document.getElementById('vlogs');
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
+      router.push('/blog');
       setIsOpen(false);
     } else if (item === 'Home') {
       router.push('/');
@@ -109,7 +104,7 @@ export default function Navbar() {
               <button 
                 key={item} 
                 onClick={() => handleMenuClick(item)}
-                className={`font-medium hover:opacity-80 transition-opacity cursor-pointer pb-1 border-b-2 ${
+                className={`font-medium hover:opacity-80 transition-all duration-500 ease-in-out cursor-pointer pb-1 border-b-2 ${
                   activeItem === item ? 'border-white' : 'border-transparent'
                 }`}
               >
