@@ -102,7 +102,7 @@ export default function IntroductionSection() {
                 Call us anytime
               </p>
               <p className="text-xl font-semibold text-[#12373F]">
-                +256 56778.5678
+                +1 416-837-0470
               </p>
             </div>
           </div>
