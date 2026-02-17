@@ -1,10 +1,46 @@
 "use client";
 
 import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 
 export default function IntroductionSection() {
+  const [count, setCount] = useState(0);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          let current = 0;
+          const target = 25;
+          const duration = 2000;
+          const increment = target / (duration / 16);
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              setCount(target);
+              clearInterval(timer);
+            } else {
+              setCount(Math.floor(current));
+            }
+          }, 16);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [hasAnimated]);
+
   return (
-    <section className="w-full bg-[#E8F3F4] py-20">
+    <section ref={sectionRef} className="w-full bg-[#E8F3F4] py-20">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
         
         {/* LEFT IMAGE LAYOUT */}
@@ -22,7 +58,7 @@ export default function IntroductionSection() {
 
           {/* Experience Card */}
           <div className="absolute -left-4 sm:-left-6 top-10 bg-[#1B505B] text-white px-6 sm:px-8 py-6 sm:py-10 rounded-2xl shadow-xl">
-            <h2 className="text-3xl sm:text-4xl font-bold">25+</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold">{count}+</h2>
             <p className="text-xs sm:text-sm mt-2 opacity-90">
               Years of Experience
             </p>
@@ -92,7 +128,7 @@ export default function IntroductionSection() {
           </div>
 
           {/* Contact */}
-          <div className="mt-10 flex items-center gap-6">
+          <a href="tel:+14168370470" className="mt-10 flex items-center gap-6 w-fit hover:opacity-80 transition cursor-pointer">
             <div className="bg-white text-[#1B505B] p-4 rounded-xl shadow-md">
               📞
             </div>
@@ -105,7 +141,7 @@ export default function IntroductionSection() {
                 +1 416-837-0470
               </p>
             </div>
-          </div>
+          </a>
 
         </div>
       </div>
