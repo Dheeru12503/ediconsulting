@@ -28,7 +28,7 @@ const erpSystems = [
 export default function ERPIntegrationsSection() {
   return (
     <section className="w-full bg-gradient-to-b from-[#F4FAFB] to-white py-16 sm:py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center">
+      <div className="container mx-auto px-4 md:px-6 text-center">
 
         {/* TITLE */}
         <h2 className="text-3xl sm:text-4xl font-bold text-[#12373F] animate-fadeUp">

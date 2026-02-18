@@ -18,15 +18,15 @@ export default function HeroSection() {
       </div>
       
       {/* CONTENT */}
-      <div className="container mx-auto px-6 py-24 max-[760px]:px-4 max-[760px]:py-8 relative z-20  md:flex md:items-center">
+      <div className="container mx-auto px-4 md:px-6 py-24 max-[760px]:py-8 relative z-20 md:flex md:items-center">
         <div className="gap-12 items-center w-full max-[760px]:flex max-[760px]:flex-col">
           <div className="space-y-8 w-full max-[760px]:space-y-0 max-[760px]:flex max-[760px]:flex-col max-[760px]:h-full">
             <div className="text-white font-serif leading-tight max-[760px]:text-center max-[760px]:px-2 max-[760px]:pt-4 max-[760px]:flex-shrink-0">
-              <h1 className="text-[59px] md:text-[38px] lg:text-[59px] max-[760px]:text-[24px] max-[760px]:leading-tight underline decoration-white decoration-[2px] underline-offset-[4px] [text-decoration-skip-ink:auto]">
+              <h1 className="text-[59px] md:text-[38px] lg:text-[59px] max-[575px]:text-[24px] max-[760px]:text-[38px] max-[760px]:leading-tight underline decoration-white decoration-[2px] underline-offset-[4px] [text-decoration-skip-ink:auto]">
                 EDI Integration
               </h1>
 
-              <h2 className="text-[59px] md:text-[38px] lg:text-[59px] max-[760px]:text-[24px] max-[760px]:leading-tight mt-6 max-[760px]:mt-2 max-[760px]:whitespace-nowrap">
+              <h2 className="text-[59px] md:text-[38px] lg:text-[59px] max-[575px]:text-[24px] max-[760px]:text-[38px] max-[760px]:leading-tight mt-6 max-[760px]:mt-2 max-[760px]:whitespace-nowrap">
                 Precision{" "}
                 <span className="underline decoration-white decoration-[2px] underline-offset-[4px] [text-decoration-skip-ink:auto]">
                   Meets Reliability
@@ -84,7 +84,7 @@ export default function HeroSection() {
       {/* Name Badge - Mobile */}
       <div className="absolute top-[280px] right-0 bg-[#03343D] px-3 py-1 rounded-l-xl min-[760px]:hidden z-20">
         <p
-          className="text-white text-[18px]"
+          className="text-white text-[18px] min-[576px]:text-[27px]"
           style={{
             fontFamily: "Lovers Quarrel, cursive",
             fontWeight: "400",

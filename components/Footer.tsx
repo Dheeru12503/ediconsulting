@@ -6,7 +6,9 @@ export default function Footer() {
   const handleLinkClick = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -100;
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     } else {
       window.location.href = `/#${sectionId}`;
     }

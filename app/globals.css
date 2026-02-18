@@ -30,9 +30,9 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
   .container {
-    max-width: 540px;
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
+    max-width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 }
 

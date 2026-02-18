@@ -161,7 +161,7 @@ export default function HeroTabs() {
             onClick={() => setExpandedAccordion(expandedAccordion === "trading" ? "edi" : "trading")}
             className="w-full bg-gray-500/40 text-black font-bold py-2.5 px-4 text-center text-xs rounded-b-2xl"
           >
-            Trading Partner
+            3PL & Carriers
           </button>
           <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
             expandedAccordion === "trading" ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
