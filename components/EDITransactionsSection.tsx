@@ -4,7 +4,7 @@
 export default function EDITransactionsSection() {
   const standardTx = [
     "850","855","860","865","856",
-    "810","820","846","852","997"
+    "810","852","997","820","846"
   ];
 
   const logisticsTx = ["940","945","944","214"];
