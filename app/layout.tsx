@@ -19,7 +19,7 @@ const jacquesFrancois = Jacques_Francois({
 });
 
 export const metadata: Metadata = {
-  title: "AdiConsulting - EDI Integration",
+  title: "EDI Integration",
   description: "EDI Integration - Precision Meets Reliability",
 };
 
